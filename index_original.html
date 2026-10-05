@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Guardianes del Patrimonio de Isla Tenglo</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f8f7;
+        color: #18343d;
+      }
+
+      /* NAVBAR */
+
+      nav {
+        background: #073b4c;
+        color: white;
+        padding: 18px 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+
+      /* HERO */
+
+      .hero {
+        min-height: 80vh;
+
+        display: flex;
+        align-items: center;
+
+        padding: 70px 8%;
+
+        color: white;
+
+        background:
+          linear-gradient(rgba(7, 59, 76, 0.78), rgba(17, 138, 178, 0.7)),
+          url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=80");
+
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-content {
+        max-width: 850px;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 6vw, 75px);
+        line-height: 1.05;
+        margin-bottom: 25px;
+      }
+
+      .hero p {
+        font-size: 21px;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        display: inline-block;
+
+        padding: 15px 25px;
+
+        border-radius: 30px;
+
+        background: #06d6a0;
+        color: #073b4c;
+
+        font-weight: bold;
+
+        text-decoration: none;
+      }
+
+      /* SECCIONES */
+
+      section {
+        padding: 80px 8%;
+      }
+
+      .titulo {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .titulo h2 {
+        font-size: 38px;
+        color: #073b4c;
+      }
+
+      .titulo p {
+        margin-top: 10px;
+      }
+
+      /* HITOS */
+
+      .hitos {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+        gap: 25px;
+      }
+
+      .card {
+        background: white;
+
+        border-radius: 20px;
+
+        overflow: hidden;
+
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+      }
+
+      .card-img {
+        height: 170px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 70px;
+
+        background: linear-gradient(135deg, #d8f8ef, #d8eff8);
+      }
+
+      .card-content {
+        padding: 25px;
+      }
+
+      .card h3 {
+        color: #073b4c;
+        margin-bottom: 12px;
+      }
+
+      .card button {
+        border: 0;
+
+        padding: 12px 18px;
+
+        border-radius: 10px;
+
+        background: #073b4c;
+
+        color: white;
+
+        cursor: pointer;
+
+        font-weight: bold;
+
+        margin-top: 15px;
+      }
+
+      /* TECNOLOGIA */
+
+      .tecnologia {
+        background: #f7f0dc;
+      }
+
+      .tech-grid {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+        gap: 25px;
+      }
+
+      .tech {
+        background: white;
+
+        padding: 30px;
+
+        border-radius: 20px;
+
+        text-align: center;
+      }
+
+      .tech-icon {
+        font-size: 55px;
+        margin-bottom: 15px;
+      }
+
+      /* PROYECTO */
+
+      .proyecto {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+
+        align-items: center;
+      }
+
+      .proyecto-box {
+        background: #073b4c;
+
+        color: white;
+
+        padding: 40px;
+
+        border-radius: 25px;
+      }
+
+      .proyecto-box h2 {
+        margin-bottom: 20px;
+      }
+
+      .lista {
+        margin-top: 25px;
+      }
+
+      .lista li {
+        margin-bottom: 15px;
+      }
+
+      /* QR */
+
+      .qr-section {
+        background: #e9f8f4;
+
+        text-align: center;
+      }
+
+      .qr-container {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        gap: 25px;
+
+        margin-top: 40px;
+      }
+
+      .qr-card {
+        background: white;
+
+        padding: 25px;
+
+        border-radius: 20px;
+
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .qr-card img {
+        width: 180px;
+        height: 180px;
+
+        margin: 15px auto;
+
+        display: block;
+      }
+
+      /* FOOTER */
+
+      footer {
+        background: #052b37;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 40px;
+      }
+
+      /* MODAL */
+
+      .modal {
+        display: none;
+
+        position: fixed;
+
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.75);
+
+        align-items: center;
+
+        justify-content: center;
+
+        padding: 20px;
+
+        z-index: 5000;
+      }
+
+      .modal.active {
+        display: flex;
+      }
+
+      .modal-content {
+        background: white;
+
+        max-width: 600px;
+
+        width: 100%;
+
+        padding: 35px;
+
+        border-radius: 25px;
+
+        position: relative;
+
+        text-align: center;
+      }
+
+      .close {
+        position: absolute;
+
+        top: 10px;
+        right: 20px;
+
+        font-size: 30px;
+
+        border: 0;
+
+        background: none;
+
+        cursor: pointer;
+      }
+
+      /* RESPONSIVE */
+
+      @media (max-width: 700px) {
+        nav {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        nav a {
+          margin: 5px;
+        }
+
+        .proyecto {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ========================= -->
+    <!-- NAVEGACIÓN -->
+    <!-- ========================= -->
+
+    <nav>
+      <div class="logo">🌿 Guardianes de Isla Tenglo</div>
+
+      <div>
+        <a href="#inicio">Inicio</a>
+
+        <a href="#hitos">Hitos</a>
+
+        <a href="#tecnologia">Tecnología</a>
+
+        <a href="#proyecto">Proyecto</a>
+      </div>
+    </nav>
+
+    <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
+
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p>ESCUELA RURAL PUNTILLA DE TENGLO · 6° BÁSICO</p>
+
+        <h1>Nuestra isla tiene una historia.</h1>
+
+        <p>
+          Somos estudiantes de sexto básico que utilizamos tecnología para
+          descubrir, proteger y difundir el patrimonio cultural y arqueológico
+          de Isla Tenglo.
+        </p>
+
+        <a href="#hitos" class="btn"> 🗺️ Explorar nuestro patrimonio </a>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- HITOS -->
+    <!-- ========================= -->
+
+    <section id="hitos">
+      <div class="titulo">
+        <h2>🗺️ Hitos de Isla Tenglo</h2>
+
+        <p>Descubre los lugares que forman parte de nuestra historia.</p>
+      </div>
+
+      <div class="hitos">
+        <!-- CRUZ -->
+
+        <div class="card">
+          <div class="card-img">✝️</div>
+
+          <div class="card-content">
+            <h3>Cruz de Tenglo</h3>
+
+            <p>
+              Uno de los lugares representativos de nuestra isla y su identidad.
+            </p>
+
+            <button onclick="mostrarHito('cruz')">Conocer historia</button>
+          </div>
+        </div>
+
+        <!-- EMBARCADERO -->
+
+        <div class="card">
+          <div class="card-img">⛵</div>
+
+          <div class="card-content">
+            <h3>Embarcadero</h3>
+
+            <p>
+              Un punto fundamental de conexión entre Tenglo, el mar y Puerto
+              Montt.
+            </p>
+
+            <button onclick="mostrarHito('embarcadero')">
+              Conocer historia
+            </button>
+          </div>
+        </div>
+
+        <!-- CONCHALES -->
+
+        <div class="card">
+          <div class="card-img">🏺</div>
+
+          <div class="card-content">
+            <h3>Conchales</h3>
+
+            <p>
+              Huellas arqueológicas que nos permiten conocer el pasado del
+              territorio.
+            </p>
+
+            <button onclick="mostrarHito('conchales')">Conocer historia</button>
+          </div>
+        </div>
+
+        <!-- SITIO ARQUEOLÓGICO -->
+
+        <div class="card">
+          <div class="card-img">🔎</div>
+
+          <div class="card-content">
+            <h3>Sitio arqueológico</h3>
+
+            <p>
+              Un espacio que nos invita a investigar y proteger nuestro
+              patrimonio.
+            </p>
+
+            <button onclick="mostrarHito('arqueologico')">
+              Conocer historia
+            </button>
+          </div>
+        </div>
+
+        <!-- ESCUELA -->
+
+        <div class="card">
+          <div class="card-img">🏫</div>
+
+          <div class="card-content">
+            <h3>Nuestra Escuela</h3>
+
+            <p>
+              La Escuela Rural Puntilla de Tenglo, donde nació este proyecto.
+            </p>
+
+            <button onclick="mostrarHito('escuela')">Conocer historia</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- TECNOLOGÍA -->
+    <!-- ========================= -->
+
+    <section class="tecnologia" id="tecnologia">
+      <div class="titulo">
+        <h2>🤖 Tecnología al servicio del patrimonio</h2>
+
+        <p>
+          Utilizamos herramientas tecnológicas para investigar, representar y
+          compartir nuestra historia.
+        </p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech">
+          <div class="tech-icon">🧩</div>
+
+          <h3>Maqueta 3D</h3>
+
+          <p>Representamos nuestra isla y sus principales hitos.</p>
+        </div>
+
+        <div class="tech">
+          <div class="tech-icon">🛸</div>
+
+          <h3>Dron</h3>
+
+          <p>
+            Capturamos imágenes aéreas para observar nuestro territorio desde
+            otra perspectiva.
+          </p>
+        </div>
+
+        <div class="tech">
+          <div class="tech-icon">🤖</div>
+
+          <h3>LEGO SPIKE Essential</h3>
+
+          <p>
+            Nuestro robot recorre la maqueta y ayuda a contar la historia de los
+            lugares.
+          </p>
+        </div>
+
+        <div class="tech">
+          <div class="tech-icon">📱</div>
+
+          <h3>Códigos QR</h3>
+
+          <p>Conectamos los lugares físicos con información digital.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- PROYECTO -->
+    <!-- ========================= -->
+
+    <section id="proyecto">
+      <div class="proyecto">
+        <div>
+          <h2>💚 ¿Qué queremos lograr?</h2>
+
+          <p>
+            Queremos que nuestra comunidad, los visitantes y las futuras
+            generaciones puedan conocer, valorar y proteger el patrimonio de
+            Isla Tenglo.
+          </p>
+
+          <ul class="lista">
+            <li>🔎 Investigar nuestra historia.</li>
+
+            <li>🧩 Representar nuestro territorio.</li>
+
+            <li>📱 Difundir nuestro patrimonio.</li>
+
+            <li>🛡️ Promover su protección.</li>
+          </ul>
+        </div>
+
+        <div class="proyecto-box">
+          <h2>Guardianes del Patrimonio</h2>
+
+          <p>
+            Somos estudiantes de sexto básico de la Escuela Rural Puntilla de
+            Tenglo.
+          </p>
+
+          <br />
+
+          <p>
+            <strong>
+              La tecnología es nuestra herramienta. El patrimonio es nuestro
+              propósito.
+            </strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- QR -->
+    <!-- ========================= -->
+
+    <section class="qr-section">
+      <div class="titulo">
+        <h2>📱 Nuestros códigos QR</h2>
+
+        <p>
+          Cada código puede instalarse físicamente en el hito correspondiente.
+        </p>
+      </div>
+
+      <div class="qr-container">
+        <div class="qr-card">
+          <h3>✝️ Cruz de Tenglo</h3>
+
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://ejemplo.cl/tenglo/cruz"
+            alt="QR Cruz de Tenglo"
+          />
+
+          <p>Escanea para conocer su historia.</p>
+        </div>
+
+        <div class="qr-card">
+          <h3>⛵ Embarcadero</h3>
+
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://ejemplo.cl/tenglo/embarcadero"
+            alt="QR Embarcadero"
+          />
+
+          <p>Escanea para conocer su historia.</p>
+        </div>
+
+        <div class="qr-card">
+          <h3>🏺 Conchales</h3>
+
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://ejemplo.cl/tenglo/conchales"
+            alt="QR Conchales"
+          />
+
+          <p>Escanea para conocer su historia.</p>
+        </div>
+
+        <div class="qr-card">
+          <h3>🔎 Sitio arqueológico</h3>
+
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://ejemplo.cl/tenglo/arqueologico"
+            alt="QR Sitio arqueológico"
+          />
+
+          <p>Escanea para conocer su historia.</p>
+        </div>
+
+        <div class="qr-card">
+          <h3>🏫 Escuela</h3>
+
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://ejemplo.cl/tenglo/escuela"
+            alt="QR Escuela"
+          />
+
+          <p>Conoce nuestro proyecto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer>
+      <h3>🌿 Guardianes del Patrimonio de Isla Tenglo</h3>
+
+      <p>Escuela Rural Puntilla de Tenglo · 6° Básico</p>
+
+      <p>“Descubrir · Proteger · Difundir”</p>
+    </footer>
+
+    <!-- ========================= -->
+    <!-- MODAL -->
+    <!-- ========================= -->
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button class="close" onclick="cerrarModal()">×</button>
+
+        <h2 id="modalTitulo"></h2>
+
+        <p id="modalTexto"></p>
+      </div>
+    </div>
+
+    <script>
+      const hitos = {
+        cruz: {
+          titulo: "✝️ Cruz de Tenglo",
+
+          texto:
+            "La Cruz de Tenglo es uno de los lugares que identificamos como parte del patrimonio y la identidad de nuestra isla. Aquí podremos incorporar la historia investigada por nuestros estudiantes, fotografías, videos y testimonios de la comunidad.",
+        },
+
+        embarcadero: {
+          titulo: "⛵ Embarcadero",
+
+          texto:
+            "El embarcadero representa una conexión fundamental de la comunidad de Tenglo con el mar y con Puerto Montt. Aquí podremos incorporar fotografías, relatos y antecedentes históricos.",
+        },
+
+        conchales: {
+          titulo: "🏺 Conchales",
+
+          texto:
+            "Los conchales son evidencias arqueológicas que nos ayudan a comprender la relación de las personas con el territorio. La información definitiva debe ser validada utilizando fuentes patrimoniales confiables.",
+        },
+
+        arqueologico: {
+          titulo: "🔎 Sitio arqueológico",
+
+          texto:
+            "Este sitio representa una oportunidad para conocer, investigar y valorar las evidencias del pasado de Isla Tenglo. Aquí incorporaremos información recopilada por los estudiantes.",
+        },
+
+        escuela: {
+          titulo: "🏫 Escuela Rural Puntilla de Tenglo",
+
+          texto:
+            "Nuestra escuela es parte de la historia viva de la comunidad y es el punto de partida de este proyecto. Desde aquí nace nuestra misión de convertirnos en Guardianes del Patrimonio.",
+        },
+      };
+
+      function mostrarHito(id) {
+        document.getElementById("modalTitulo").innerText = hitos[id].titulo;
+
+        document.getElementById("modalTexto").innerText = hitos[id].texto;
+
+        document.getElementById("modal").classList.add("active");
+      }
+
+      function cerrarModal() {
+        document.getElementById("modal").classList.remove("active");
+      }
+    </script>
+  </body>
+</html>

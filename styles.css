@@ -1,0 +1,37 @@
+:root{
+  --azul:#073b4c; --azul2:#118ab2; --verde:#06d6a0; --arena:#f7f0dc;
+  --fondo:#f4f8f7; --texto:#18343d; --blanco:#fff; --gris:#63777f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--fondo);color:var(--texto);line-height:1.65}
+a{color:var(--azul2)}
+nav{background:var(--azul);color:#fff;padding:16px 7%;display:flex;justify-content:space-between;align-items:center;gap:20px;position:sticky;top:0;z-index:1000;box-shadow:0 3px 16px rgba(0,0,0,.12)}
+nav .logo{font-size:18px;font-weight:700}
+nav .links{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-weight:600}
+.hero{min-height:62vh;display:flex;align-items:center;padding:70px 8%;color:white;background:linear-gradient(rgba(7,59,76,.78),rgba(17,138,178,.72)),url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Isla_Tenglo_%2825845696522%29.jpg');background-size:cover;background-position:center}
+.hero.small{min-height:48vh}
+.hero-content{max-width:900px}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.9rem;font-weight:700;margin-bottom:10px}
+h1{font-size:clamp(2.3rem,6vw,4.8rem);line-height:1.03;margin-bottom:22px}
+.hero p{font-size:1.18rem;max-width:760px}
+.btn{display:inline-block;margin-top:24px;padding:13px 22px;border-radius:28px;background:var(--verde);color:var(--azul);font-weight:700;text-decoration:none}
+main section{padding:64px 8%}
+.container{max-width:1100px;margin:auto}
+.grid2{display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:start}
+.card{background:#fff;border-radius:20px;padding:28px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.card h2,.card h3{color:var(--azul);margin-bottom:14px}
+.card p+p{margin-top:14px}
+.fact{background:var(--arena);border-left:5px solid var(--verde);padding:20px;border-radius:12px;margin-top:18px}
+.timeline{display:grid;gap:14px;margin-top:20px}.timeline div{background:#fff;padding:18px 20px;border-radius:14px;border-left:4px solid var(--azul2);box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:24px}
+figure{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 5px 18px rgba(0,0,0,.08)}
+figure img{width:100%;height:250px;object-fit:cover;display:block}
+figcaption{font-size:.86rem;padding:12px 14px;color:var(--gris)}
+.source-list{padding-left:20px}.source-list li{margin-bottom:10px}
+.notice{background:#e9f8f4;border-radius:16px;padding:22px;margin-top:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}.mini{background:#fff;border-radius:18px;padding:24px;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+.mini h3{margin-bottom:10px}.mini a{display:inline-block;margin-top:12px;font-weight:700;text-decoration:none}
+footer{background:#052b37;color:#fff;text-align:center;padding:34px 8%;margin-top:40px}
+@media(max-width:760px){nav{flex-direction:column;align-items:flex-start}.grid2{grid-template-columns:1fr}.hero{min-height:54vh;padding:55px 7%}main section{padding:48px 7%}}
